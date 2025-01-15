@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import X-ray Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #xray-image {
+            margin-top: 20px;
+            max-width: 50%;
+            height: 430px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+
+        #image-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="http://localhost:5000/predict" method="post" enctype="multipart/form-data" style="position: relative;">
+        <h1>Dự đoán bệnh viêm phổi</h1>
+        <input type="file" name="file" id="image-input" accept="image/*" />
+        <h1 style="height: 20px;">{{ prediction }}</p></h1>
+
+        <div id="image-container">
+            <img id="xray-image" src="" alt="X-ray preview" style="display:none;">
+        </div>
+        <button style="background-color: rgb(34, 124, 234); color: white;
+             padding: 10px 15px; border-radius: 3px; border: none ;position: absolute; top: 630px;" type="submit">
+            Gửi
+        </button>
+    </form>
+
+    <script>
+        const imageInput = document.getElementById('image-input');
+        const xrayImage = document.getElementById('xray-image');
+
+        imageInput.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            console.log(file)
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    xrayImage.src = e.target.result;
+                    xrayImage.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
