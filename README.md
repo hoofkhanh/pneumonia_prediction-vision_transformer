@@ -1,3 +1,4 @@
+<div><h1>Ứng dụng dự đoán bệnh viêm phổi bằng ảnh x-ray</h1></div>
 <div>Dữ liệu được kết hợp bởi 2 file trên kaggle</div>
 https://www.kaggle.com/datasets/nih-chest-xrays/data <br/>
 https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia <br/>
