@@ -9,3 +9,6 @@ Sử dụng model <b>Vision Transformer</b> <br/>
 <br/>
 
 Độ chính xác sau khi train là ~ 89% <br/>
+
+<div>app và templates là danh cho ứng dụng (muốn chạy thì hãy dùng lệnh python app.py)</div>
+<div>Pneumonia.ipynb và file train, và file weight sau khi train là vit_pneumonia_weights.best.weights.h5</div>
