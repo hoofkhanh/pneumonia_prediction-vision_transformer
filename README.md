@@ -1,4 +1,4 @@
-Dữ liệu được kết hợp bởi 2 fi kagglee
+<div>Dữ liệu được kết hợp bởi 2 file kagglee</div>
 https://www.kaggle.com/datasets/nih-chest-xrays/data
 https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
 
